@@ -12,7 +12,7 @@ class MapReduce:
         self.chunk_size = chunk_size
         self.queue = Queue()
 
-    def split_data_into_chunks(self, data):
+    def chunks_function(self, data):
         # Split the input data into chunks of size chunk_size and return a list of these chunks.
         return [data[i:i + self.chunk_size] for i in range(0, len(data), self.chunk_size)]
 
